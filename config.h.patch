@@ -1,0 +1,68 @@
+--- config.def.h	2025-04-21 09:22:55.967822966 +0500
++++ config.h	2025-04-21 09:26:04.171806740 +0500
+@@ -5,7 +5,8 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+- static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++//  Make sure you have ttf-hack-nerd installed
++ static char *font = "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true";
+  static int borderpx = 2;
+  
+  /*
+@@ -96,33 +97,34 @@
+  /* Terminal colors (16 first used in escape sequence) */
+  static const char *colorname[] = {
+      /* 8 normal colors */
+-     "black",
+-     "red3",
+-     "green3",
+-     "yellow3",
+-     "blue2",
+-     "magenta3",
+-     "cyan3",
+-     "gray90",
+- 
++     "#5a3f47", // black
++     "#ffb4a9", // red
++     "#8ff0a4", // green
++     "#f9f06b", // yellow
++     "#99c1f1", // blue
++     "#dc8add", // magenta
++     "#62a0ea", // cyan
++     "#ebe0e1", // white
++
+      /* 8 bright colors */
+-     "gray50",
+-     "red",
+-     "green",
+-     "yellow",
+-     "#5c5cff",
+-     "magenta",
+-     "cyan",
+-     "white",
+- 
++     "#77767b", // bright black
++     "#f66151", // bright red
++     "#57e389", // bright green
++     "#f8e45c", // bright yellow
++     "#3584e4", // bright blue
++     "#c061cb", // bright magenta
++     "#62a0ea", // bright cyan
++     "#ebe0e1", // bright white
++
+      [255] = 0,
+- 
++
+      /* more colors can be added after 255 to use with DefaultXX */
+      "#cccccc",
+      "#555555",
+-     "gray90", /* default foreground colour */
+-     "black", /* default background colour */
++     "#ebe0e1", /* default foreground colour */
++     "#1f1a1b", /* default background colour */
+  };
++
+  
+  
+  /*
